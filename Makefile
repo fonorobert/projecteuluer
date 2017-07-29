@@ -1,9 +1,11 @@
-srcfiles = $(notdir $(wildcard src/*.c))
-outputs = $(basename $(srcfiles))
 builddir = build
+srcdir = src
 CC = gcc
+
+srcfiles = $(notdir $(wildcard $(srcdir)/*.c))
+outputs = $(basename $(srcfiles))
 
 all: $(outputs)
 
-$(outputs): %: src/%.c
+$(outputs): %: $(srcdir)/%.c
 	$(CC) -o $(builddir)/$@ $<
