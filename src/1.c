@@ -29,7 +29,7 @@ int summultiples(int limit, int bases[2]) {
 	int result = 0;
 
 	for (int i = 0; i < limit; i ++) {
-		for (int j = 0; j < 2; j++) {
+		for (int j = 0; j <= 2; j++) {
 			bool multiple = ismultiple(i, bases[j]);
 			if (multiple) {
 				result += i;
@@ -42,7 +42,7 @@ int summultiples(int limit, int bases[2]) {
 
 bool ismultiple(int a, int b) {
 	int mod = a%b;
-	if (mod == 0 && a/b > 1) {
+	if (mod == 0 && a/b >= 1) {
 		return true;
 	} else {
 		return false;
