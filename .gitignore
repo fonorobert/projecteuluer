@@ -5,5 +5,7 @@ build/*
 temp/*
 
 # valgrind outputs
-
 vgcore.*
+
+# swp files
+*.swp
