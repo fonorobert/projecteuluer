@@ -1,2 +1,5 @@
 # build directory contents
 build/*
+
+# temp directory for local scrap files
+temp/*

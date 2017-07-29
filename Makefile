@@ -9,3 +9,6 @@ all: $(outputs)
 
 $(outputs): %: $(srcdir)/%.c
 	$(CC) -o $(builddir)/$@ $<
+
+clean:
+	rm build/*
